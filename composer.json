@@ -1,0 +1,26 @@
+{
+    "name": "alexrili/simple-test",
+    "description": "just a simple absctraction of lumen tests",
+    "require": {
+        "codeception/aspect-mock": "^3.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alexrili",
+            "email": "alexrili@gmail.com"
+        }
+    ],
+    "keywords" : [ "test", "mock","phpunit", "lumen","laravel"],
+    "autoload" : {
+        "psr-4" : {
+            "LogBug\\" : "src/"
+        },
+        "psr-0" : {
+            "LogBug\\" : "src/"
+        },
+        "classmap" : [ "./" ]
+    },
+    "type" : "library",
+    "homepage" : "https://github.com/alexrili/simple-test.git"
+}
