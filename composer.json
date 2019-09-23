@@ -1,5 +1,5 @@
 {
-    "name": "alexrili/simple-test",
+    "name": "alexrili/php-easy-test",
     "description": "just a simple absctraction of lumen tests",
     "require": {
         "codeception/aspect-mock": "^3.0"
