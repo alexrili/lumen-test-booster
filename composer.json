@@ -1,8 +1,9 @@
 {
     "name": "alexrili/php-easy-test",
-    "description": "just a simple absctraction of lumen tests",
+    "description": "just a small absctraction of lumen tests",
     "require": {
-        "codeception/aspect-mock": "^3.0"
+        "codeception/aspect-mock": "^3.0",
+        "goaop/parser-reflection": "1.4.1"
     },
     "license": "MIT",
     "authors": [
@@ -14,13 +15,10 @@
     "keywords" : [ "test", "mock","phpunit", "lumen","laravel"],
     "autoload" : {
         "psr-4" : {
-            "LogBug\\" : "src/"
-        },
-        "psr-0" : {
-            "LogBug\\" : "src/"
+            "Alexrili\\PhpEasyTest\\": "src/"
         },
         "classmap" : [ "./" ]
     },
     "type" : "library",
-    "homepage" : "https://github.com/alexrili/simple-test.git"
+    "homepage" : "https://github.com/alexrili/php-easy-test.git"
 }
