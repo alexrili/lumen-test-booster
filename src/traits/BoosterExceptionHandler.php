@@ -1,6 +1,6 @@
 <?php
 
-trait EasyExceptionHandler
+trait BoosterExceptionHandler
 {
 
     /**

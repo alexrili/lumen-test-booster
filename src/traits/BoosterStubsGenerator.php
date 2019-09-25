@@ -3,7 +3,7 @@
 
 use AspectMock\Test as test;
 
-trait EasyStubsGenerator
+trait BoosterStubsGenerator
 {
 
     /**

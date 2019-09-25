@@ -3,7 +3,7 @@
 
 use AspectMock\Kernel;
 
-trait EasyAspectMock
+trait BoosterAspectMock
 {
 
     /**

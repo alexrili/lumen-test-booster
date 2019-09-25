@@ -1,6 +1,6 @@
 {
-    "name": "alexrili/php-easy-test",
-    "description": "just a small absctraction of lumen tests",
+    "name": "alexrili/lumen-test-booster",
+    "description": "just a small boost of lumen tests",
     "require": {
         "codeception/aspect-mock": "^3.0"
     },
@@ -19,5 +19,5 @@
         "classmap" : [ "./" ]
     },
     "type" : "library",
-    "homepage" : "https://github.com/alexrili/php-easy-test.git"
+    "homepage" : "https://github.com/alexrili/lumen-test-booster.git"
 }
