@@ -18,14 +18,14 @@ Name your `clone classes` as YourClassName**Stub** and put them inside a `Stubs`
         Stubs\
           ClassYouWantToCloneStub
 ```
-Import PhpEasyTest as a `trait` in your high level TestCase class. 
-> use \PhpEasyTest;
+Import LumenTestBooster as a `trait` in your high level TestCase class. 
+> use \LumenTestBooster;
 
 ```php
 // ...
 abstract class TestCase extends Base
 {
-    use \PhpEasyTest;
+    use \LumenTestBooster;
 //    ...
 }
 ```
@@ -49,7 +49,7 @@ Let's say you have a class name **NotificationService** and you want to mock/stu
 First of all you need to create a **NotificationServiceStub** inside a `tests/Stubs/` folder.
 After this, you just call  `$this->stubClasses([ClassYourWantToMock::class]);` inside your `setUp` method.
 And That's It.
-> Don't forget to import `PhpEasyTest` in your `TestCase` class.
+> Don't forget to import `LumenTestBooster` in your `TestCase` class.
 ```
     tests\
         Stubs\
@@ -73,7 +73,7 @@ But, if you want to test some different returns of a method? Eg. you need to tes
           NotificationServiceStub.php
 ``` 
 > Inside your StubClass(in this case NotificationServiceStub), you will create a `sendEmailNotificationError()` method. 
-
+> In this case you can disable exception handler by call `$this->withoutShowingExceptions()` 
 ```php
 //  ...    
     /** @test */
@@ -85,6 +85,45 @@ But, if you want to test some different returns of a method? Eg. you need to tes
 //    ...
 ```
 
+## Other configs
+
+You can change exception handlers to not showing/handler in runtime. Say you have a specific test you want to return an error.
+```php
+//  ...    
+    /** @test */
+    public function should_return_error()
+    {
+        $this->withoutShowingExceptions();
+//     ...
+    }
+//    ...
+```
+
+You also can change the default set of stub paths. 
+> This config must be put inside you high level test case class.
+```php
+//  ...    
+    /**
+     * setup before class function
+     *
+     * @return void
+     */
+    public static function setUpBeforeClass(): void
+    {
+
+        self::initAspectMock(
+        [
+             'appDir' => '/', // root directory of your aplication. 
+             'debug' => true, // to get debug details 
+             'includePaths' => [__DIR__ . '/api/app', '/common'], // you can put how many folders you want to be maped here.
+             'cacheDir' => __DIR__ . '../storage/cache/__tests_ // place where you 'mocked/stub' class are runing.
+        ]);
+        parent::setUpBeforeClass();
+    }
+//    ...
+```
 
 
-
+## Thanks!
+@GMBN (the goldenboy)
+@cadukiz
