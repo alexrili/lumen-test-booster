@@ -1,4 +1,4 @@
-# PHP Easy Test
+# Lumen Test Booster
 Just a small abstraction of lumen test with aspectmock and handler excpetion. 
 
 ## Install
