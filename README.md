@@ -124,6 +124,6 @@ You also can change the default set of stub paths.
 ```
 
 
-## Thanks!
+### Thanks!
 @GMBN (the goldenboy)
 @cadukiz
