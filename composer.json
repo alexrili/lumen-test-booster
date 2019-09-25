@@ -2,8 +2,7 @@
     "name": "alexrili/php-easy-test",
     "description": "just a small absctraction of lumen tests",
     "require": {
-        "codeception/aspect-mock": "^3.0",
-        "goaop/parser-reflection": "1.4.1"
+        "codeception/aspect-mock": "^3.0"
     },
     "license": "MIT",
     "authors": [
