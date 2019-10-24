@@ -5,7 +5,7 @@ Just a small abstraction of lumen test with aspectmock and handler excpetion.
 
 ```bash
 # Install in dev mode
-composer require alexrili/php-easy-test --dev
+composer require alexrili/lumen-test-booster --dev
 ```
 
 ## how to use
