@@ -2,6 +2,7 @@
 
 
 use AspectMock\Test as test;
+use Illuminate\Support\Arr;
 
 trait BoosterStubsGenerator
 {
@@ -72,7 +73,7 @@ trait BoosterStubsGenerator
         foreach ($class_names as $class) {
             $methods = get_class_methods($class);
             foreach ($methods as $method_name) {
-                $class_name = array_last(explode("\\", $class));
+                $class_name = Arr::last(explode("\\", $class));
                 $mock_class = self::$path_stub . "\\{$class_name}Stub";
                 if (method_exists((new $mock_class), $method_name)) {
                     $this->doubleMethod($class, $method_name)
